@@ -43,7 +43,12 @@ const BlogIndex = ({
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2></h2>
+                  <h2>
+                    {" "}
+                    <Link to={post.uri} itemProp="url">
+                      <span itemProp="headline">{parse(title)}</span>
+                    </Link>
+                  </h2>
                   <small>{post.date}</small>
                 </header>
                 <section itemProp="description">{parse(post.excerpt)}</section>
